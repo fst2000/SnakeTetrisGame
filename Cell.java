@@ -1,6 +1,5 @@
 public interface Cell
 {
-    Drawer drawer();
-    CellEnum current();
-    CellEnum next();
+    Drawer getDrawer();
+    Cell nextCellState();
 }

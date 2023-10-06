@@ -21,7 +21,7 @@ public class DrawPanel extends JPanel
             for(int y = 0; y < map[1].length; y++)
             {
                 if(map[x][y] != null)
-                map[x][y].drawer().draw(g);
+                map[x][y].getDrawer().draw(g);
             }
         }
     }

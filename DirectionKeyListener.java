@@ -1,9 +1,10 @@
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class DirectionKeyListener implements KeyListener, Direction
+public class DirectionKeyListener implements KeyListener, Int2
 {
-    DirEnum d = DirEnum.UP;
+    int x;
+    int y;
     @Override
     public void keyTyped(KeyEvent e)
     {
@@ -12,17 +13,22 @@ public class DirectionKeyListener implements KeyListener, Direction
     @Override
     public void keyPressed(KeyEvent e)
     {
-        if(e.getKeyCode() == KeyEvent.VK_UP) d = DirEnum.UP;
-        if(e.getKeyCode() == KeyEvent.VK_RIGHT) d = DirEnum.RIGHT;
-        if(e.getKeyCode() == KeyEvent.VK_DOWN) d = DirEnum.DOWN;
-        if(e.getKeyCode() == KeyEvent.VK_LEFT) d = DirEnum.LEFT;
+        if(e.getKeyCode() == KeyEvent.VK_UP) {y = 1; x = 0;}
+        if(e.getKeyCode() == KeyEvent.VK_RIGHT) {y = 0; x = 1;}
+        if(e.getKeyCode() == KeyEvent.VK_DOWN) {y = -1; x = 0;}
+        if(e.getKeyCode() == KeyEvent.VK_LEFT) {y = 0; x = -1;}
     }
     @Override
     public void keyReleased(KeyEvent e)
     {
     }
-    public DirEnum getDirection()
+    @Override
+    public int getX()
     {
-        return d;
+        return x;
+    }
+    @Override
+    public int getY() {
+        return y;
     }
 }
