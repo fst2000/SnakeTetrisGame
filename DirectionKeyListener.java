@@ -3,8 +3,8 @@ import java.awt.event.KeyListener;
 
 public class DirectionKeyListener implements KeyListener, Int2
 {
-    int x;
-    int y;
+    private int x;
+    private int y;
     @Override
     public void keyTyped(KeyEvent e)
     {
