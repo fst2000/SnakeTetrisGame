@@ -1,21 +1,30 @@
 public class Snake
 {
     private int length;
-    private Int2 snakeDirection;
-    public Snake(int length, Int2 snakeDirection)
+    private Direction snakeDirection;
+    private boolean isDead;
+    Snake(int length, Direction snakeDirection)
     {
         this.length = length;
     }
-    public Int2 getSnakeDirection()
+    Direction getSnakeDirection()
     {
         return snakeDirection;
     }
-    public int getLength()
+    int getLength()
     {
         return length;
     }
-    public void eat()
+    void eat()
     {
         length++;
+    }
+    void die()
+    {
+        isDead = true;
+    }
+    boolean isDead()
+    {
+        return isDead;
     }
 }

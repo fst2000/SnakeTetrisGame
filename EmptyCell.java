@@ -6,7 +6,7 @@ public class EmptyCell implements Cell
     }
     public Cell nextCellState(Snake snake, Cell[][] map, int x, int y)
     {
-        Int2 direction = snake.getSnakeDirection();
+        Direction direction = snake.getSnakeDirection();
         if(map[x - direction.getX()][y - direction.getY()].getClass() == HeadCell.class) return new HeadCell();
         else return this;
     }

@@ -1,7 +1,7 @@
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class DirectionKeyListener implements KeyListener, Int2
+public class DirectionKeyListener implements KeyListener, Direction
 {
     private int x;
     private int y;

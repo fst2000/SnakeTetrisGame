@@ -1,4 +1,4 @@
-public interface Int2
+public interface Direction
 {
     int getX();
     int getY();

@@ -13,8 +13,12 @@ public class HeadCell implements Cell
     @Override
     public Cell nextCellState(Snake snake, Cell[][] map, int x, int y)
     {
-        Int2 direction = snake.getSnakeDirection();
-        if(map[x + direction.getX()][y + direction.getY()].getClass() == BodyCell.class) return new EmptyCell();
+        Direction direction = snake.getSnakeDirection();
+        if(map[x + direction.getX()][y + direction.getY()].getClass() == BodyCell.class)
+        {
+            snake.die();
+            return new EmptyCell();
+        }
         else return new BodyCell(snake.getLength());
     }
     
