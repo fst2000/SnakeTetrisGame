@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Graphics;
 
 import javax.swing.JPanel;
@@ -16,6 +17,7 @@ public class DrawPanel extends JPanel
         sizeX = map[0].length * cellSize;
         sizeY = map[1].length * cellSize;
         setSize(sizeX, sizeY);
+        setPreferredSize(new Dimension(sizeX, sizeY));
     }
     @Override
     public void paint(Graphics g)

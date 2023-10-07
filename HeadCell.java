@@ -19,9 +19,9 @@ public class HeadCell implements Cell
         if(map[checkX][checkY].getClass() == BodyCell.class)
         {
             snake.die();
-            return new EmptyCell();
+            return this;
         }
-        else return new BodyCell(snake.getLength());
+        return new BodyCell(snake.getLength());
     }
     
 }
