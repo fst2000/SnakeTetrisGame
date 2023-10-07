@@ -1,3 +1,5 @@
+import java.awt.Color;
+
 public class BodyCell implements Cell
 {
     int lifeTime;
@@ -8,7 +10,11 @@ public class BodyCell implements Cell
     @Override
     public Drawer getDrawer()
     {
-        return (g, x, y, s) -> g.fillRect(x * s, y * s, s, s);
+        return (g, x, y, s) ->
+        {
+            g.setColor(Color.RED);
+            g.fillRect(x * s, y * s, s, s);
+        };
     }
     @Override
     public Cell nextCellState(Snake snake, Cell[][] map, int x, int y)

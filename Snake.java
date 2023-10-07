@@ -6,6 +6,7 @@ public class Snake
     Snake(int length, Direction snakeDirection)
     {
         this.length = length;
+        this.snakeDirection = snakeDirection;
     }
     Direction getSnakeDirection()
     {

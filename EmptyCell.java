@@ -7,7 +7,9 @@ public class EmptyCell implements Cell
     public Cell nextCellState(Snake snake, Cell[][] map, int x, int y)
     {
         Direction direction = snake.getSnakeDirection();
-        if(map[x - direction.getX()][y - direction.getY()].getClass() == HeadCell.class) return new HeadCell();
+        int checkX = Int.Loop(x - direction.getX(), 0, map[0].length - 1);
+        int checkY = Int.Loop(y - direction.getY(), 0, map[1].length - 1);
+        if(map[checkX][checkY].getClass() == HeadCell.class) return new HeadCell();
         else return this;
     }
     
