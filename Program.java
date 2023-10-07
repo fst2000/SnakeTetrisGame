@@ -8,9 +8,9 @@ public class Program
         int size = 512;
         int mapSize = 64;
         int pixelSize = size / mapSize;
-        int snakeLength = 5;
+        int snakeLength = 10;
         DirectionKeyListener input = new DirectionKeyListener();
-        Snake snake = new Snake(snakeLength, new SnakeDirection(input));
+        Snake snake = new Snake(snakeLength, input);
         Cell [][] map = new Cell[mapSize][mapSize];
         JFrame frame = new GameFrame(size);
         JPanel mapPanel = new DrawPanel(map, pixelSize);
