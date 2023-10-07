@@ -14,8 +14,8 @@ public class HeadCell implements Cell
     public Cell nextCellState(Snake snake, Cell[][] map, int x, int y)
     {
         Direction direction = snake.getSnakeDirection();
-        int checkX = Int.Loop(x + direction.getX(), 0, map[0].length);
-        int checkY = Int.Loop(y + direction.getY(), 0, map[1].length);
+        int checkX = Int.loop(x + direction.getX(), 0, map[0].length);
+        int checkY = Int.loop(y + direction.getY(), 0, map[1].length);
         if(map[checkX][checkY].getClass() == BodyCell.class)
         {
             snake.die();

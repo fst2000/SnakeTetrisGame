@@ -1,6 +1,6 @@
 public class Int
 {
-    static int Loop(int value, int min, int max)
+    static int loop(int value, int min, int max)
     {
         int length = max - min;
         if(length < 0) System.out.println("length is negative!");
